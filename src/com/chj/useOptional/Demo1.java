@@ -16,11 +16,11 @@ public class Demo1 {
     private static boolean startBeforeEnd;
 
     public static void main(String[] args) {
-//        restTimeStart = "08:20:00";
-//        restTimeEnd = "17:30:00";
+        restTimeStart = "08:00:00";
+        restTimeEnd = "23:00:00";
 
-        restTimeStart = "18:01:00";
-        restTimeEnd = "08:30:00";
+//        restTimeStart = "18:01:00";
+//        restTimeEnd = "08:30:00";
 
         LocalTime start = LocalTime.parse(restTimeStart);
         LocalTime end = LocalTime.parse(restTimeEnd);
@@ -54,7 +54,7 @@ public class Demo1 {
 
     private static void testTime(){
         LocalTime now = LocalTime.now();
-//        now = LocalTime.parse("01:02:00");
+        now = LocalTime.parse("23:32:00");
 
         if(startBeforeEnd){
             if(now.isAfter(LocalTime.parse(restTimeStart))
@@ -67,6 +67,6 @@ public class Demo1 {
                 return;
             }
         }
-        System.out.println("---other");
+        System.out.println("---发送通知");
     }
 }
